@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-
-
   --clr-white: #fff;
   --clr-black: #222;
   --font-primary: 'Montserrat', sans-serif;
@@ -41,19 +39,126 @@ ul {
 a {
   text-decoration: none;
 }
-
 img {
   display: block;
 }
 
-
-
-.Card{
+.Header{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &_Container{
     width: 100%;
-    display: flex;
-    justify-content: center;
+    box-shadow: rgb(0 0 0 / 14%) 0 2px 2px 0;
+    transition: left .3s ease,top .3s ease;
     &_Content{
-        background-color: aquamarine;
-        font-size: 20px;
+      margin: 0 auto;
+      max-width: 1140px;
+      padding: 10px 0;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      &_Logo{
+        display: block;
+      }
+    }
+    
+  }
+
+  }
+  
+.Main{
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 150px);
+
+    &_Container{
+      margin: 0 auto;
+      max-width: 1140px;
+      width: 100%;
+      height: 100%;
+      &_Content{
+        display: grid;
+        justify-content: flex-start;
+        align-items: center;
+        grid-template-areas: 
+                          "text"
+                          "title"
+                          "subtitle"
+                          "form";
+
+                &_Text{
+                  grid-area: text;
+              }
+              &_Title{
+                  grid-area: title;
+              }
+              &_Subtitle{
+                  grid-area: subtitle;
+              }
+              &_Form{
+                grid-area: form;
+              }
+      }
+
+
+
+    }
+
+}
+.Footer{
+  width: 100%;
+  height: 100%;
+  background-color:#ffff;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+
+  &_Container{
+    max-width: 1093px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    &_Img{
+      display: block;
+    }
+
+  }
+}
+.backgroundImage{
+    width: 100%;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+    position: relative;
+    @media screen and (min-width: 600px) {
+      height: 260px;
+    }
+    @media screen and (min-width: 786px) {
+      height: 360px;
+    }
+    @media screen and (min-width: 1280px) {
+      height: 360px;
+    }
+    &_Color{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: var(--background-color);
+    }
+    &_Title{
+      font-weight: 800;
+      text-transform: uppercase;
+      z-index: 100;
     }
 }
