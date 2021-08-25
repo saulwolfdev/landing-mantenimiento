@@ -1,133 +1,148 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --clr-white: #fff;
+    --clr-black: #222;
+    --font-primary: 'Montserrat', sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --grayscale-shadow: rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 16px 32px -4px;
+    --black-shadow: 0 25px 20px 0 rgb(0 0 0 / 16%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+    --background-color: rgb(0 53 255 / 50%);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    --fixed-width-max: 900px;
+}
+
+@font-face {
+    font-family: Telefonica Regular;
+    src: local("Telefonica Regular"), local("Telefonica Regular"), url(Telefonica-Regular.otf);
+    font-weight: bold;
+}
 
 :root {
-  --clr-white: #fff;
-  --clr-black: #222;
-  --font-primary: 'Montserrat', sans-serif;
-  --transition: all 0.3s linear;
-  --spacing: 0.25rem;
-  --radius: 0.5rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --grayscale-shadow:rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 16px 32px -4px;
-  --black-shadow:0 25px 20px 0 rgb(0 0 0 / 16%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
-  --background-color: rgb(0 53 255 / 50%);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-  --fixed-width-max: 900px;
+    --clr-white: #fff;
+    --clr-black: #222;
+    --font-primary: 'Telefonica Regular', sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --grayscale-shadow: rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 16px 32px -4px;
+    --black-shadow: 0 25px 20px 0 rgb(0 0 0 / 16%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+    --background-color: rgb(0 53 255 / 50%);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    --fixed-width-max: 900px;
 }
 
 *,
 ::after,
 ::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
+
 body {
-  font-family: var(--font-primary);
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
-  line-height: 1.5;
-  font-size: 0.875rem;
+    font-family: var(--font-primary);
+    background: var(--clr-grey-10);
+    color: var(--clr-grey-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
 }
+
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
+
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 img {
-  display: block;
+    display: block;
 }
 
-.Header{
-  width: 100%;
-  height: 100%;
-  position: relative;
-  &_Container{
+.Header {
     width: 100%;
-    box-shadow: rgb(0 0 0 / 14%) 0 2px 2px 0;
-    transition: left .3s ease,top .3s ease;
-    &_Content{
-      margin: 0 auto;
-      max-width: 1140px;
-      padding: 10px 0;
-      display: flex;
-      justify-content:center;
-      align-items: center;
-      &_Logo{
-        display: block;
-      }
+    height: 100%;
+    position: relative;
+    &_Container {
+        width: 100%;
+        /*box-shadow: rgb(0 0 0 / 14%) 0 2px 2px 0;*/
+        transition: left .3s ease, top .3s ease;
+        &_Content {
+            margin: 0 auto;
+            max-width: 1140px;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &_Logo {
+                display: block;
+            }
+        }
     }
-    
-  }
+}
 
-  }
-  
-.Main{
-  width: 100%;
-  height: 100%;
-  min-height: calc(100vh - 150px);
-
-    &_Container{
-      margin: 0 auto;
-      max-width: 1140px;
-      width: 100%;
-      height: 100%;
-      &_Content{
-        display: grid;
-        justify-content: flex-start;
-        align-items: center;
-        grid-template-areas: 
-                          "text"
-                          "title"
-                          "subtitle"
-                          "form";
-
-                &_Text{
-                  grid-area: text;
-              }
-              &_Title{
-                  grid-area: title;
-              }
-              &_Subtitle{
-                  grid-area: subtitle;
-              }
-              &_Form{
+.Main {
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 150px);
+    &_Container {
+        margin: 0 auto;
+        max-width: 1140px;
+        width: 100%;
+        height: 100%;
+        &_Content {
+            display: grid;
+            justify-content: flex-start;
+            align-items: center;
+            grid-template-areas: "text" "title" "subtitle" "form";
+            &_Text {
+                grid-area: text;
+            }
+            &_Title {
+                grid-area: title;
+            }
+            &_Subtitle {
+                grid-area: subtitle;
+            }
+            &_Form {
                 grid-area: form;
-              }
-      }
-
-
-
+                &_inputs {
+                    background-color: #222;
+                }
+            }
+        }
     }
-
 }
-.Footer{
-  width: 100%;
-  height: 100%;
-  background-color:#ffff;
-  padding: 20px;
-  width: 100%;
-  height: 100%;
 
-  &_Container{
-    max-width: 1093px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-
-    &_Img{
-      display: block;
+.Footer {
+    width: 100%;
+    height: 100%;
+    background-color: #ffff;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    &_Container {
+        max-width: 1093px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        &_Img {
+            display: block;
+        }
     }
-
-  }
 }
-.backgroundImage{
+
+.backgroundImage {
     width: 100%;
     height: 260px;
     display: flex;
@@ -137,28 +152,36 @@ img {
     text-transform: uppercase;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size:cover;
+    background-size: cover;
     position: relative;
     @media screen and (min-width: 600px) {
-      height: 260px;
+        height: 260px;
     }
     @media screen and (min-width: 786px) {
-      height: 360px;
+        height: 360px;
     }
     @media screen and (min-width: 1280px) {
-      height: 360px;
+        height: 360px;
     }
-    &_Color{
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: var(--background-color);
+    &_Color {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--background-color);
     }
-    &_Title{
-      font-weight: 800;
-      text-transform: uppercase;
-      z-index: 100;
+    &_Title {
+        font-weight: 800;
+        text-transform: uppercase;
+        z-index: 100;
+    }
+}
+
+.card {
+    width: 100%;
+    &_item {
+        font-size: 12px;
+        background-color: #222;
     }
 }
