@@ -1,231 +1,301 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-@font-face {
-  font-family: Telefonica Regular;
-  src: local("Telefonica Regular"), local("Telefonica Regular"), url(Telefonica-Regular.otf);
-  font-weight: bold;
-  }
-  :root {
-  --clr-white: #fff;
-  --clr-black: #222;
-  --font-primary: 'Telefonica Regular', sans-serif;
-  --transition: all 0.3s linear;
-  --spacing: 0.25rem;
-  --radius: 0.5rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --grayscale-shadow: rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 16px 32px -4px;
-  --black-shadow: 0 25px 20px 0 rgb(0 0 0 / 16%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
-  --background-color: rgb(0 53 255 / 50%);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-  --fixed-width-max: 900px;
-  }
-
-
-*,
-::after,
-::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-body {
-    font-family: var(--font-primary);
-    background: var(--clr-grey-10);
-    color: var(--clr-grey-1);
-    line-height: 1.5;
-    font-size: 0.875rem;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-img {
-    display: block;
-}
-
-.Header {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    &_Container {
-        width: 100%;
-        /*box-shadow: rgb(0 0 0 / 14%) 0 2px 2px 0;*/
-        transition: left .3s ease, top .3s ease;
-        &_Content {
-            margin: 0 auto;
-            max-width: 1140px;
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &_Logo {
-                display: block;
-            }
-        }
-    }
-    
-  }
-
-  
-.Main{
-   width: 100%;
-    height: 100%;
-    min-height: calc(100vh - 150px);
-    display: grid;
-    grid-template-columns: 100% 100%;
-    grid-template-areas: "contentMain contentMain";
-
-    @media screen and (min-width: 600px) {
-      grid-template-columns: 100% 100%;
-      grid-template-areas: "contentMain contentMain";
-    }
-    @media screen and (min-width: 786px) {
-      grid-template-columns: 100% 100%;
-      grid-template-areas: "contentMain contentMain";
-    }
-    @media screen and (min-width: 1280px) {
-      grid-template-columns: 60% 40%;
-      grid-template-areas: "contentMain content";
-    }
-
-    &_Container{
-      margin: 0 auto;
-      max-width: 1140px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &_Content{
-        display: grid;
-        justify-content: flex-start;
-        align-items: center;
-        grid-template-areas: 
-                          "text"
-                          "title"
-                          "subtitle"
-                          "form";
-
-                &_Text{
-                  grid-area: text;
-
-              }
-              &_Title{
-                grid-area: title;
-                font-size: 64px;
-                color: #c3c3c3;
-                line-height: 1;
-                font-weight: 400;
-                margin-bottom: 16px;
-              }
-              &_Subtitle{
-                  grid-area: subtitle;
-                  font-size: 24px;
-                  color: #00adff;
-              }
-              &_Form {
-                    grid-area: form;
-                        .Form_Content {
-                          display: flex;
-                          position: relative;
-                          flex-direction: column;
-                          justify-content: center;
-                            &_Container{
-                              width: 60%;
-                              position: relative;
-                              &_Labels {
-                                position: absolute;
-                                z-index: 1;
-                                top: 24px;
-                                left: 16px;
-                                text-align: left;
-                                color: rgba(116, 116, 116, 1);
-                                font-style: normal;
-                                font-family: Telefonica;
-                                font-weight: 300;
-                                font-size: 12px;
-                                letter-spacing: 0.12px;
-                                line-height: 24px;
+                @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+                @font-face {
+                    font-family: Telefonica Regular;
+                    src: local("Telefonica Regular"), local("Telefonica Regular"), url(Telefonica-Regular.otf);
+                    font-weight: bold;
+                }
+                
+                @font-face {
+                    font-family: 'Guthen';
+                    src: url('https://www.movistar.com.ar/documents/10180/36682980/Guthen-Bloots-Basic.woff');
+                }
+                
+                 :root {
+                    --clr-white: #fff;
+                    --clr-black: #222;
+                    --font-primary: 'Telefonica Regular', sans-serif;
+                    --font-secondary: 'Guthen', sans-serif;
+                    --transition: all 0.3s linear;
+                    --spacing: 0.25rem;
+                    --radius: 0.5rem;
+                    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                    --grayscale-shadow: rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 16px 32px -4px;
+                    --black-shadow: 0 25px 20px 0 rgb(0 0 0 / 16%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+                    --background-color: rgb(0 53 255 / 50%);
+                    --max-width: 1170px;
+                    --fixed-width: 620px;
+                    --fixed-width-max: 900px;
+                }
+                
+                *,
+                 ::after,
+                 ::before {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    text-decoration: none;
+                }
+                
+                body {
+                    font-family: var(--font-primary);
+                    background: var(--clr-grey-10);
+                    color: var(--clr-grey-1);
+                    line-height: 1.5;
+                    font-size: 0.875rem;
+                    overflow-x: hidden;
+                }
+                
+                ul {
+                    list-style-type: none;
+                }
+                
+                a {
+                    text-decoration: none;
+                }
+                
+                img {
+                    display: block;
+                }
+                
+                .Header {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    &_Container {
+                        width: 100%;
+                        box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px;
+                        transition: left .3s ease, top .3s ease;
+                        &_Content {
+                            margin: 0 auto;
+                            max-width: 1140px;
+                            padding: 10px 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            &_Logo {
+                                display: block;
                             }
-                            &_Inputs {
-                                display: flex;
-                                position: relative;
-                                width: 100%;
-                                height: 64px;
-                                color: #00A9E0;
-                                background-color: #fafafa;
-                                border-radius: 8px;
-                                border: 0px;
-                                border-color: #fff;
-                                margin: 3% 0;
-                                padding: 2% 1%;
-                                font-style: normal;
-                                font-family: Telefonica;
-                                font-weight: 400;
-                                font-size: 14px;
-                                letter-spacing: 0.12px;
-                                line-height: 24px;
+                        }
+                    }
+                }
+                
+                .Main {
+                    width: 100%;
+                    height: 100%;
+                    min-height: calc(100vh - 150px);
+                    display: grid;
+                    grid-template-columns: 100% 100%;
+                    grid-template-areas: "contentMain contentMain";
+                    @media screen and (max-width: 500px) {
+                        grid-template-columns: 100% 100%;
+                        grid-template-areas: "contentMain contentMain";
+                        padding: 0 10%;
+                    }
+                    @media screen and (min-width: 600px) {
+                        grid-template-columns: 100% 100%;
+                        grid-template-areas: "contentMain contentMain";
+                    }
+                    @media screen and (min-width: 786px) {
+                        grid-template-columns: 100% 100%;
+                        grid-template-areas: "contentMain contentMain";
+                        padding: 0 5%;
+                    }
+                    @media screen and (min-width: 1280px) {
+                        grid-template-columns: 60% 40%;
+                        grid-template-areas: "contentMain content";
+                    }
+                    &_Container {
+                        margin: 0 auto;
+                        max-width: 1140px;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &_Content {
+                            display: grid;
+                            justify-content: flex-start;
+                            align-items: center;
+                            grid-template-areas: "text" "title" "subtitle" "form";
+                            &_Text {
+                                grid-area: text;
+                                font-family: "Guthen";
+                                font-size: 100px;
+                                color: #019df4;
+                                @media screen and (max-width: 500px) {
+                                    font-size: 70px;
+                                }
                             }
-                              &_Button {
-                                width: 100%;
-                                height: 42px;
-                                background-color: #00A9E0;
-                                border-radius: 60px;
-                                border: 0;
-                                color: white;
+                            &_Title {
+                                grid-area: title;
+                                font-style: normal;
+                                font-weight: 200;
+                                line-height: 30px;
+                                font-size: 64px;
+                                color: #50534A;
+                                line-height: 1;
+                                margin-bottom: 16px;
+                                @media screen and (max-width: 500px) {
+                                    font-size: 30px;
+                                }
+                            }
+                            &_Subtitle {
+                                width: 65%;
+                                grid-area: subtitle;
+                                font-style: normal;
+                                font-weight: 200;
+                                font-size: 24px;
+                                line-height: 30px;
+                                color: #019df4;
+                                margin-bottom: 16px;
+                                @media screen and (max-width: 500px) {
+                                    width: 100%;
+                                    margin-bottom: 14px;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                }
+                            }
+                            &_Form {
+                                grid-area: form;
+                                .Form_Content {
+                                    display: flex;
+                                    position: relative;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    &_Container {
+                                        width: 60%;
+                                        position: relative;
+                                        @media screen and (max-width: 500px) {
+                                            width: 100%;
+                                        }
+                                        &_Labels {
+                                            position: absolute;
+                                            z-index: 1;
+                                            top: 24px;
+                                            left: 16px;
+                                            text-align: left;
+                                            color: rgba(116, 116, 116, 1);
+                                            font-style: normal;
+                                            font-family: Telefonica;
+                                            font-weight: 300;
+                                            font-size: 12px;
+                                            letter-spacing: 0.12px;
+                                            line-height: 24px;
+                                        }
+                                        &_Inputs {
+                                            display: flex;
+                                            position: relative;
+                                            width: 100%;
+                                            height: 64px;
+                                            color: #019df4;
+                                            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+                                            border-radius: 8px;
+                                            border: 0px;
+                                            border-color: #fff;
+                                            margin: 3% 0;
+                                            padding: 9% 3% 3% 4%;
+                                            font-style: normal;
+                                            font-family: Telefonica;
+                                            font-weight: 400;
+                                            font-size: 14px;
+                                            letter-spacing: 0.12px;
+                                            line-height: 24px;
+                                            &:focus {
+                                                outline: none;
+                                                border-color: #019df4;
+                                                box-shadow: 0 0 5px #019df4;
+                                            }
+                                        }
+                                        // checkbox
+                                        &_Radio_Item {
+                                            display: inline-block;
+                                            position: relative;
+                                            margin: 10px;
+                                            height: 50px;
+                                            &_Check {
+                                                display: none;
+                                            }
+                                            &_Label {
+                                                border-radius: 11px;
+                                                width: 12px;
+                                                height: 12px;
+                                                position: absolute;
+                                                top: 9px;
+                                                left: 10px;
+                                                content: " ";
+                                                display: block;
+                                                background: #019df4;
+                                                &:after {
+                                                    border-radius: 11px;
+                                                    width: 12px;
+                                                    height: 12px;
+                                                    position: absolute;
+                                                    top: 9px;
+                                                    left: 10px;
+                                                    content: " ";
+                                                    display: block;
+                                                    background: #019df4;
+                                                }
+                                            }
+                                        }
+                                        &_Button {
+                                            cursor: pointer;
+                                            width: 100%;
+                                            height: 42px;
+                                            background-color: #019df4;
+                                            border-radius: 60px;
+                                            border: 0;
+                                            color: white;
+                                            &:hover {
+                                                background-color: #0096c7 !important;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
-
-                } 
-      }
-    }
-    &_Img{
-      width: 100%;
-      height: 100%;
-      background-image: url("../img/Background.svg");
-      background-size: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: none;
-      @media screen and (min-width: 600px) {
-        display: none;
-      }
-      @media screen and (min-width: 786px) {
-        display: none;
-      }
-      @media screen and (min-width: 1280px) {
-       display: block;
-      }
-    }
-}
-
-.Footer {
-    width: 100%;
-    height: 100%;
-    background-color: #ffff;
-    padding: 20px;
-    width: 100%;
-    height: 100%;
-    &_Container {
-        max-width: 1093px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        &_Img {
-            display: block;
-        }
-    }
-}
-
-
+                    }
+                    &_Img {
+                        width: 100%;
+                        height: 100%;
+                        background-image: url("../img/Background.svg");
+                        background-size: 100%;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        display: none;
+                        @media screen and (min-width: 600px) {
+                            display: none;
+                        }
+                        @media screen and (min-width: 786px) {
+                            display: none;
+                        }
+                        @media screen and (min-width: 1280px) {
+                            display: block;
+                        }
+                    }
+                }
+                
+                .Footer {
+                    width: 100%;
+                    height: 100%;
+                    background-color: #ffff;
+                    margin-top: 5%;
+                    padding: 20px;
+                    width: 100%;
+                    height: 100%;
+                    &_Container {
+                        max-width: 1093px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto;
+                        &_Img {
+                            display: block;
+                            @media screen and (max-width: 500px) {
+                                width: 30%;
+                            }
+                        }
+                    }
+                }
