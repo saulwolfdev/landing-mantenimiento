@@ -63,7 +63,7 @@
                     position: relative;
                     &_Container {
                         width: 100%;
-                        /*box-shadow: rgb(0 0 0 / 14%) 0 2px 2px 0;*/
+                        box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px;
                         transition: left .3s ease, top .3s ease;
                         &_Content {
                             margin: 0 auto;
