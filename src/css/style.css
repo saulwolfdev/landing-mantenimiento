@@ -57,7 +57,7 @@ img {
 }
 .Header_Container {
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.14) 0 2px 2px 0;
+  /*box-shadow: rgb(0 0 0 / 14%) 0 2px 2px 0;*/
   transition: left 0.3s ease, top 0.3s ease;
 }
 .Header_Container_Content {
@@ -131,6 +131,57 @@ img {
 }
 .Main_Container_Content_Form {
   grid-area: form;
+}
+.Main_Container_Content_Form .Form_Content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+}
+.Main_Container_Content_Form .Form_Content_Container {
+  width: 60%;
+  position: relative;
+}
+.Main_Container_Content_Form .Form_Content_Container_Labels {
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  left: 16px;
+  text-align: left;
+  color: #747474;
+  font-style: normal;
+  font-family: Telefonica;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.12px;
+  line-height: 24px;
+}
+.Main_Container_Content_Form .Form_Content_Container_Inputs {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 64px;
+  color: #00A9E0;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 0px;
+  border-color: #fff;
+  margin: 3% 0;
+  padding: 2% 1%;
+  font-style: normal;
+  font-family: Telefonica;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.12px;
+  line-height: 24px;
+}
+.Main_Container_Content_Form .Form_Content_Container_Button {
+  width: 100%;
+  height: 42px;
+  background-color: #00A9E0;
+  border-radius: 60px;
+  border: 0;
+  color: white;
 }
 .Main_Img {
   width: 100%;
