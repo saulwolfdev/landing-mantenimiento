@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-:root {
+@font-face {
+  font-family: Telefonica Regular;
+  src: local("Telefonica Regular"), local("Telefonica Regular"), url(Telefonica-Regular.otf);
+  font-weight: bold;
+  }
+  :root {
   --clr-white: #fff;
   --clr-black: #222;
-  --font-primary: 'Noto Sans KR', sans-serif;
+  --font-primary: 'Telefonica Regular', sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --grayscale-shadow:rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 16px 32px -4px;
-  --black-shadow:0 25px 20px 0 rgb(0 0 0 / 16%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+  --grayscale-shadow: rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 16px 32px -4px;
+  --black-shadow: 0 25px 20px 0 rgb(0 0 0 / 16%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
   --background-color: rgb(0 53 255 / 50%);
   --max-width: 1170px;
   --fixed-width: 620px;
   --fixed-width-max: 900px;
-}
+  }
+
 
 *,
 ::after,
@@ -106,12 +112,20 @@ img {
 
                 &_Text{
                   grid-area: text;
+
               }
               &_Title{
-                  grid-area: title;
+                grid-area: title;
+                font-size: 64px;
+                color: #c3c3c3;
+                line-height: 1;
+                font-weight: 400;
+                margin-bottom: 16px;
               }
               &_Subtitle{
                   grid-area: subtitle;
+                  font-size: 24px;
+                  color: #00adff;
               }
               &_Form{
                 grid-area: form;
