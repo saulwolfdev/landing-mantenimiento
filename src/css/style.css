@@ -150,8 +150,56 @@ img {
   grid-area: form;
 }
 
-.Main_Container_Content_Form_inputs {
-  background-color: #222;
+.Main_Container_Content_Form .Form_Content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Main_Container_Content_Form .Form_Content .Labels {
+  position: absolute;
+  margin-top: 14px;
+  text-align: left;
+  color: #747474;
+  padding: 1%;
+  font-style: normal;
+  font-family: Telefonica;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.12px;
+  line-height: 24px;
+}
+
+.Main_Container_Content_Form .Form_Content .Inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 400px;
+  height: 64px;
+  color: #00A9E0;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 0px;
+  border-color: #fff;
+  margin: 3% 0;
+  padding: 2% 1%;
+  font-family: Telefonica;
+  font-style: normal;
+  font-family: Telefonica;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.12px;
+  line-height: 24px;
+}
+
+.Main_Container_Content_Form .Button {
+  width: 100%;
+  height: 42px;
+  background-color: #00A9E0;
+  border-radius: 20px;
+  border: 0px;
+  color: white;
 }
 
 .Footer {
