@@ -114,7 +114,7 @@ img {
             grid-template-areas: "text" "title" "subtitle" "form";
             &_Text {
                 grid-area: text;
-                font-family: Guthen;
+                font-family: 'Guthen', sans-serif;
             }
             &_Title {
                 grid-area: title;
