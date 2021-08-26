@@ -5,9 +5,8 @@
   font-weight: bold;
 }
 @font-face {
-  font-family: Guthem;
-  src: local("Guthen Bloots Personal Use"), local("Guthen Bloots Personal Use"), url(Guthen_Bloots_Personal_Use.ttf);
-  font-weight: bold;
+  font-family: "Guthen";
+  src: url("https://www.movistar.com.ar/documents/10180/36682980/Guthen-Bloots-Basic.woff");
 }
 :root {
   --clr-white: #fff;
@@ -42,6 +41,7 @@ body {
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
+  overflow-x: hidden;
 }
 
 ul {
@@ -90,12 +90,14 @@ img {
   .Main {
     grid-template-columns: 100% 100%;
     grid-template-areas: "contentMain contentMain";
+    margin: 0 20px;
   }
 }
 @media screen and (min-width: 786px) {
   .Main {
     grid-template-columns: 100% 100%;
     grid-template-areas: "contentMain contentMain";
+    margin: 0 20px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -121,20 +123,28 @@ img {
 }
 .Main_Container_Content_Text {
   grid-area: text;
-  font-family: "Guthen", sans-serif;
+  font-family: "Guthen";
+  font-size: 100px;
+  color: #019df4;
 }
 .Main_Container_Content_Title {
   grid-area: title;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 30px;
   font-size: 64px;
-  color: #c3c3c3;
+  color: #50534A;
   line-height: 1;
-  font-weight: 400;
   margin-bottom: 16px;
 }
 .Main_Container_Content_Subtitle {
   grid-area: subtitle;
+  font-style: normal;
+  font-weight: 200;
   font-size: 24px;
-  color: #00adff;
+  line-height: 30px;
+  color: #019df4;
+  margin-bottom: 16px;
 }
 .Main_Container_Content_Form {
   grid-area: form;
@@ -168,8 +178,7 @@ img {
   position: relative;
   width: 100%;
   height: 64px;
-  color: #00A9E0;
-  background: url(images/comment-author.gif) no-repeat scroll 7px 7px;
+  color: #019df4;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   border: 0px;
@@ -185,23 +194,51 @@ img {
 }
 .Main_Container_Content_Form .Form_Content_Container_Inputs:focus {
   outline: none;
-  border-color: #00A9E0;
-  box-shadow: 0 0 5px #00A9E0;
+  border-color: #019df4;
+  box-shadow: 0 0 5px #019df4;
 }
-.Main_Container_Content_Form .Form_Content_Container.fa.fa-check.icon {
+.Main_Container_Content_Form .Form_Content_Container_Radio_Item {
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+  height: 50px;
+}
+.Main_Container_Content_Form .Form_Content_Container_Radio_Item_Check {
+  display: none;
+}
+.Main_Container_Content_Form .Form_Content_Container_Radio_Item_Label {
+  border-radius: 11px;
+  width: 12px;
+  height: 12px;
   position: absolute;
-  width: 100%;
-  padding: 38px 22px;
-  text-align: right;
-  color: #00A9E0;
+  top: 9px;
+  left: 10px;
+  content: " ";
+  display: block;
+  background: #019df4;
+}
+.Main_Container_Content_Form .Form_Content_Container_Radio_Item_Label:after {
+  border-radius: 11px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: " ";
+  display: block;
+  background: #019df4;
 }
 .Main_Container_Content_Form .Form_Content_Container_Button {
+  cursor: pointer;
   width: 100%;
   height: 42px;
-  background-color: #00A9E0;
+  background-color: #019df4;
   border-radius: 60px;
   border: 0;
   color: white;
+}
+.Main_Container_Content_Form .Form_Content_Container_Button:hover {
+  background-color: #0096c7 !important;
 }
 .Main_Img {
   width: 100%;
@@ -233,6 +270,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: #ffff;
+  margin-top: 5%;
   padding: 20px;
   width: 100%;
   height: 100%;
