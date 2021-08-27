@@ -38,7 +38,7 @@
 }
 
 body {
-    font-family:'Telefonica Regular', sans-serif!important;
+    font-family: 'Telefonica Regular', sans-serif!important;
     background: var(--clr-grey-10);
     color: var(--clr-grey-1);
     line-height: 1.5;
@@ -96,7 +96,7 @@ img {
     @media screen and (min-width: 600px) {
         grid-template-columns: 100% 100%;
         grid-template-areas: "contentMain contentMain";
-        padding: 0;
+        padding: 0 0 0 40px;
     }
     @media screen and (min-width: 786px) {
         grid-template-columns: 100% 100%;
@@ -104,9 +104,9 @@ img {
         padding: 0;
     }
     @media screen and (min-width: 1280px) {
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 45% 55%;
         grid-template-areas: "contentMain content";
-        padding: 0;
+        padding: 0 0 0 40px;
     }
     &_Container {
         margin: 0 auto;
@@ -172,6 +172,9 @@ img {
                         @media screen and (max-width: 500px) {
                             width: 100%;
                         }
+                        @media screen and (max-width: 600px) {
+                            width: 100%;
+                        }
                         &_Labels {
                             position: absolute;
                             z-index: 1;
@@ -186,10 +189,10 @@ img {
                             line-height: 24px;
                         }
                         &_Item {
-                                margin: 16px 0;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                            margin: 16px 0;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
                             &_Check {
                                 width: 20px;
                                 height: 20px;
@@ -199,7 +202,7 @@ img {
                                 margin-left: 8px;
                                 color: rgba(116, 116, 116, 1);
                             }
-                            }
+                        }
                         &_Inputs {
                             display: flex;
                             position: relative;
@@ -223,9 +226,7 @@ img {
                                 border-color: #019df4;
                                 box-shadow: 0 0 5px #019df4;
                             }
-                            
                         }
-                        // checkbox
                         &_Radio_Item {
                             display: inline-block;
                             position: relative;
