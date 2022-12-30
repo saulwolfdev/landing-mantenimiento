@@ -21,7 +21,8 @@
 ::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-decoration: none;
 }
 
@@ -47,10 +48,23 @@ img {
 
 .Card {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .Card_Content {
   background-color: aquamarine;
   font-size: 20px;
+}
+
+.Container {
+  width: 100%;
+  background-color: red;
+  padding: 20px;
+}
+.Container-Content {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
